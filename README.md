@@ -1,24 +1,51 @@
-# Overview
+Monk
+====
 
-Every Chef installation needs a Chef Repository. This is the place where cookbooks, roles, config files and other artifacts for managing systems with Chef will live. We strongly recommend storing this repository in a version control system such as Git and treat it like source code.
+Easy To Use Chef Recipes To Automate Boring Stuff.
 
-While we prefer Git, and make this repository available via GitHub, you are welcome to download a tar or zip archive and use your favorite version control system to manage the code.
 
-# Repository Directories
+Install the Chef Server
+-----------------------
 
-This repository contains several directories, and each directory contains a README file that describes what it is for in greater detail, and how to use it for managing your systems with Chef.
+## Ubuntu 16.04 x64
 
-- `cookbooks/` - Cookbooks you download or create.
-- `data_bags/` - Store data bags and items in .json in the repository.
-- `roles/` - Store roles in .rb or .json in the repository.
-- `environments/` - Store environments in .rb or .json in the repository.
+1. Ensure that Server are up-to-date:
+```bash
+sudo apt-get update
+```
 
-# Configuration
+2. Download the latest Chef server core (12.17.15 at the time of writing):
+```bash
+wget https://packages.chef.io/files/stable/chef-server/12.17.15/ubuntu/16.04/chef-server-core_12.17.15-1_amd64.deb
+```
 
-The config file, `.chef/knife.rb` is a repository specific configuration file for knife. If you're using the Chef Platform, you can download one for your organization from the management console. If you're using the Open Source Chef Server, you can generate a new one with `knife configure`. For more information about configuring Knife, see the Knife documentation.
+3. Install the server:
+```bash
+sudo dpkg -i chef-server-core_*.deb
+```
 
-<https://docs.chef.io/knife.html>
+4. Remove the download file:
+```bash
+rm chef-server-core_*.deb
+```
 
-# Next Steps
+5. Run the chef-server-ctl command to start the Chef server services:
+```bash
+sudo chef-server-ctl reconfigure
+```
 
-Read the README file in each of the subdirectories for more information about what goes in those directories.
+
+Our Recipes
+===========
+
+
+
+Misc
+====
+
+Acknowledgements
+----------------
+
+© 2018, Clivern. Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+
+**Monk** is authored and maintained by [@clivern](http://github.com/clivern).
