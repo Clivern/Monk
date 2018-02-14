@@ -54,7 +54,65 @@ chef-server-ctl org-create SHORTNAME LONGNAME --association_user USERNAME
 
 For example, let's go with the following:
 ```bash
-sudo chef-server-ctl org-create clivern "Clivern.com" --association_user monk -f clivern.pem
+sudo chef-server-ctl org-create clivern "Clivern.com" --association_user monk -f clivern-validator.pem
+```
+
+### Configure a Chef Workstation
+
+1. Clone this repository.
+
+```bash
+git clone https://github.com/Clivern/Monk.git Monk
+```
+
+2. [Download and Install the Chef Development Kit](https://downloads.chef.io/chefdk#/).
+
+3. Create `.chef` directory inside `Monk` repository.
+```bash
+cd Monk
+mkdir .chef
+```
+
+4. Then transfer the previously created private keys on chef server to `.chef` directory.
+```bash
+cd Monk
+scp root@chef_server_domain_or_ip:/root/monk.pem ./.chef
+scp root@chef_server_domain_or_ip:/root/clivern-validator.pem ./.chef
+```
+
+### Configuring Knife to Manage your Chef Environment
+
+Now that you have your Chef keys available on your workstation, we can configure the knife to connect to and control your Chef infrastructure. This is done through a knife.rb file that we will place inside `.chef` directory along with our keys.
+```bash
+nano ./.chef/knife.rb
+```
+
+In this file, paste the following information:
+```ruby
+current_dir = File.dirname(__FILE__)
+log_level                :info
+log_location             STDOUT
+node_name                "username"
+client_key               "#{current_dir}/name_of_user_key"
+validation_client_name   "organization_name-validator"
+validation_key           "#{current_dir}/organization_key"
+chef_server_url          "https://server_domain_or_IP/organizations/organization_name"
+syntax_check_cache_path  "#{ENV['HOME']}/.chef/syntaxcache"
+cookbook_path            ["#{current_dir}/../cookbooks"]
+```
+
+Which on our case should be something like the following:
+```ruby
+current_dir = File.dirname(__FILE__)
+log_level                :info
+log_location             STDOUT
+node_name                "monk"
+client_key               "#{current_dir}/monk.pem"
+validation_client_name   "clivern-validator"
+validation_key           "#{current_dir}/clivern-validator.pem"
+chef_server_url          "https://server_domain_or_IP/organizations/clivern"
+syntax_check_cache_path  "#{ENV['HOME']}/.chef/syntaxcache"
+cookbook_path            ["#{current_dir}/../cookbooks"]
 ```
 
 Our Recipes
