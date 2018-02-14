@@ -115,6 +115,9 @@ syntax_check_cache_path  "#{ENV['HOME']}/.chef/syntaxcache"
 cookbook_path            ["#{current_dir}/../cookbooks"]
 ```
 
+Now if we run `knife client list`, we should get `clivern-validator`.
+
+
 Our Recipes
 -----------
 
