@@ -118,6 +118,27 @@ cookbook_path            ["#{current_dir}/../cookbooks"]
 Now if we run `knife client list`, we should get `clivern-validator`.
 
 
+### Bootstrapping a New Node with Knife
+
+In order to bootstrap a new node, you can use the following command:
+```bash
+knife bootstrap node_domain_or_IP [options]
+```
+
+In case we want to bootstrap a node with name `node-01` and username is `root` and the private key is in `.chef` directory, we should run the following on our chef workstation.
+```bash
+knife bootstrap node_domain_or_IP -x root -A -N node-01
+```
+
+Once your new node is bootstrapped, you should have a new client:
+```bash
+$ knife client list
+
+  clivern-validator
+  node-01
+```
+
+
 Our Recipes
 -----------
 
