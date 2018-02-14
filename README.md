@@ -4,10 +4,10 @@ Monk
 Easy To Use Chef Recipes To Automate Boring Stuff.
 
 
-Install the Chef Server
------------------------
+Setup
+-----
 
-## Ubuntu 16.04 x64
+### Install the Chef Server Ubuntu 16.04 x64
 
 1. Ensure that Server are up-to-date:
 ```bash
@@ -34,14 +34,33 @@ rm chef-server-core_*.deb
 sudo chef-server-ctl reconfigure
 ```
 
+### Create an Admin User and Organization
+
+1. We can use the user-create sub-command of the chef-server-ctl command. The command requires a number of fields to be passed and The general syntax is:
+
+```bash
+chef-server-ctl user-create USERNAME FIRST_NAME LAST_NAME EMAIL PASSWORD
+```
+
+For example, Let's go with the following:
+```bash
+sudo chef-server-ctl user-create monk john doe hello@monk.com pass -f monk.pem
+```
+
+2. You can create an organization with the org-create sub-command.
+```bash
+chef-server-ctl org-create SHORTNAME LONGNAME --association_user USERNAME
+```
+
+For example, let's go with the following:
+```bash
+sudo chef-server-ctl org-create clivern "Clivern.com" --association_user monk -f clivern.pem
+```
 
 Our Recipes
-===========
+-----------
 
 
-
-Misc
-====
 
 Acknowledgements
 ----------------
