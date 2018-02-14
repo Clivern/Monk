@@ -1,4 +1,6 @@
-## Install the Chef Server on Ubuntu 16.04 x64
+## Chef Server
+
+### Install the Chef Server on Ubuntu 16.04 x64
 
 1. Ensure that Server are up-to-date:
 ```bash
