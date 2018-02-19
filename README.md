@@ -57,7 +57,7 @@ For example, let's go with the following:
 sudo chef-server-ctl org-create clivern "Clivern.com" --association_user monk -f clivern-validator.pem
 ```
 
-### Install Mangement Server UI
+### Install Management Server
 
 In order to install the management server, Just run the following:
 
