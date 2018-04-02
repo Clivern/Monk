@@ -9,27 +9,46 @@ Setup
 
 ### Install the Chef Server Ubuntu 16.04 x64
 
-1. Ensure that Server are up-to-date:
+1. Ensure that the Server is Accessible by Hostname
+The first task you need to perform is to ensure that the hostname of the server is a resolvable fully qualified domain name (FQDN) or IP address. You can check this by typing:
+
+```bash
+hostname -f
+```
+
+It should be something like the following:
+
+```bash
+sudo nano /etc/hosts
+```
+
+```bash
+127.0.1.1 fqdn_or_IP_address host_alias
+127.0.0.1 localhost
+IP_address fqdn_or_IP_address host_alias
+```
+
+2. Ensure that Server are up-to-date:
 ```bash
 sudo apt-get update
 ```
 
-2. Download the latest Chef server core (12.17.15 at the time of writing):
+3. Download the latest Chef server core (12.17.15 at the time of writing):
 ```bash
 wget https://packages.chef.io/files/stable/chef-server/12.17.15/ubuntu/16.04/chef-server-core_12.17.15-1_amd64.deb
 ```
 
-3. Install the server:
+4. Install the server:
 ```bash
 sudo dpkg -i chef-server-core_*.deb
 ```
 
-4. Remove the download file:
+5. Remove the download file:
 ```bash
 rm chef-server-core_*.deb
 ```
 
-5. Run the chef-server-ctl command to start the Chef server services:
+6. Run the chef-server-ctl command to start the Chef server services:
 ```bash
 sudo chef-server-ctl reconfigure
 ```
@@ -44,7 +63,7 @@ chef-server-ctl user-create USERNAME FIRST_NAME LAST_NAME EMAIL PASSWORD
 
 For example, Let's go with the following:
 ```bash
-sudo chef-server-ctl user-create monk john doe hello@monk.com pass -f monk.pem
+sudo chef-server-ctl user-create monk john doe hello@monk.com password -f monk.pem
 ```
 
 2. You can create an organization with the org-create sub-command.
