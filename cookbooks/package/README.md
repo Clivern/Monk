@@ -14,25 +14,25 @@ $ knife node edit node-01
 
 ```json
 {
-  	"run_list": [
- 	 	"recipe[package::default]"
-	]
+   "run_list": [
+      "recipe[package::default]"
+   ]
 }
 
 // OR
 
 {
-  	"run_list": [
- 	 	"recipe[package::install]"
-	]
+   "run_list": [
+      "recipe[package::install]"
+   ]
 }
 
 // OR
 
 {
-  	"run_list": [
- 	 	"recipe[package::update]"
-	]
+   "run_list": [
+      "recipe[package::update]"
+   ]
 }
 ```
 
@@ -50,24 +50,24 @@ $ knife node edit node-01
 
 ```json
 {
-  	"name": "node-01",
+   "name": "node-01",
 
-  	"normal": {
-    	"package": {
-      		"install": [
-        		"git",
-        		"zip",
-       	 		"unzip"
-      		]
-    	},
-    	"tags": [
+   "normal": {
+      "package": {
+         "install": [
+            "git",
+            "zip",
+            "unzip"
+         ]
+      },
+      "tags": [
 
-    	]
-  	},
+      ]
+    },
 
-  	"run_list": [
-  		"recipe[package::default]"
-	]
+   "run_list": [
+      "recipe[package::default]"
+   ]
 }
 ```
 
