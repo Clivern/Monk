@@ -176,6 +176,6 @@ Our Recipes
 Acknowledgements
 ----------------
 
-© 2018, Clivern. Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+© 2018, Clivern. Released under [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).
 
 **Monk** is authored and maintained by [@clivern](http://github.com/clivern).
