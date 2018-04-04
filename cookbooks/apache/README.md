@@ -1,5 +1,5 @@
-Package Cookbook
-================
+Apache Cookbook
+===============
 
 Installs and Configures Apache.
 
