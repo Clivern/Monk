@@ -8,35 +8,31 @@ Usage
 
 Add one of the available recipes to your node run list:
 
+```bash
+$ knife node edit node-01
+```
+
 ```json
 {
-	//Other Stuff Here...
-
   	"run_list": [
  	 	"recipe[package::default]"
 	]
-
-	//Other Stuff Here...
 }
-// OR
-{
-	//Other Stuff Here...
 
+// OR
+
+{
   	"run_list": [
  	 	"recipe[package::install]"
 	]
-
-	//Other Stuff Here...
 }
-// OR
-{
-	//Other Stuff Here...
 
+// OR
+
+{
   	"run_list": [
  	 	"recipe[package::update]"
 	]
-
-	//Other Stuff Here...
 }
 ```
 
@@ -48,11 +44,13 @@ default['package']['install'] = []
 
 And you are free to change it on the `attributes/default.rb` or from the details of a node on a Chef server:
 
+```bash
+$ knife node edit node-01
+```
+
 ```json
 {
   	"name": "node-01",
-
-  	//Other Attributes Here...
 
   	"normal": {
     	"package": {
@@ -66,8 +64,6 @@ And you are free to change it on the `attributes/default.rb` or from the details
 
     	]
   	},
-
-  	//Other Attributes Here...
 
   	"run_list": [
   		"recipe[package::default]"

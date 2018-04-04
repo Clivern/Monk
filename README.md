@@ -168,8 +168,10 @@ $ knife client list
 ```
 
 
-Our Recipes
------------
+Our Cookbooks
+-------------
+
+- [Package Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/package): Install and Configure Linux Packages.
 
 
 
