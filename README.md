@@ -172,6 +172,7 @@ Our Cookbooks
 -------------
 
 - [Package Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/package): Install and Configure Linux Packages.
+- [Apache Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/apache): Install and Configure Apache Server.
 
 
 
