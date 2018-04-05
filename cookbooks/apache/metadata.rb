@@ -1,7 +1,7 @@
 name 'apache'
 maintainer 'Clivern'
 maintainer_email 'hello@clivern.com'
-license 'All Rights Reserved'
+license 'Apache 2.0'
 description 'Installs and Configures Apache'
 long_description 'Installs and Configures Apache'
 version '1.0.0'

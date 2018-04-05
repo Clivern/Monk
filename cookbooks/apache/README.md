@@ -18,6 +18,30 @@ $ knife node edit node-01
       "recipe[apache::default]"
    ]
 }
+
+// OR
+
+{
+   "run_list": [
+      "recipe[apache::install]"
+   ]
+}
+
+// OR
+
+{
+   "run_list": [
+      "recipe[apache::purge]"
+   ]
+}
+
+// OR
+
+{
+   "run_list": [
+      "recipe[apache::remove]"
+   ]
+}
 ```
 
 
