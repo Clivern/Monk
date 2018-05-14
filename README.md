@@ -159,12 +159,17 @@ In case we want to bootstrap a node with name `node-01` and username is `root` a
 knife bootstrap node_domain_or_IP -x root -A -N node-01
 ```
 
-Once your new node is bootstrapped, you should have a new client:
+Once your new node is bootstrapped, you should have a new client and a new node:
 ```bash
 $ knife client list
 
-  clivern-validator
-  node-01
+    clivern-validator
+    node-01
+
+
+$ knife node list
+
+    node-01
 ```
 
 
@@ -174,7 +179,10 @@ Our Cookbooks
 - [Package Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/package): Install and Configure Linux Packages.
 - [Apache Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/apache): Install and Configure Apache Server.
 - [Nginx Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/nginx): Install and Configure Nginx Server.
-- [Django Apps](https://github.com/Clivern/Kevin-Cookbook/): Install and Configure Django/Python Apps.
+- [Django Apps Cookbook](https://github.com/Clivern/Kevin-Cookbook/): Install and Configure Django/Python Apps.
+- [Consul Cookbook](https://github.com/Clivern/Consul-Cookbook/): Install and Configure [Consul](https://www.consul.io/).
+- [HAProxy Cookbook](https://github.com/Clivern/HAProxy-Cookbook/): Install and Configure [HAProxy](http://www.haproxy.org/).
+- [MySQL Replication Cookbook](https://github.com/Clivern/MySQL-Replication-Cookbook/): Replicate MySQL With Chef.
 
 
 Acknowledgements
