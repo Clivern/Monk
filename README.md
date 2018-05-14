@@ -174,7 +174,9 @@ Our Cookbooks
 - [Package Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/package): Install and Configure Linux Packages.
 - [Apache Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/apache): Install and Configure Apache Server.
 - [Nginx Cookbook](https://github.com/Clivern/Monk/tree/master/cookbooks/nginx): Install and Configure Nginx Server.
-- [Django Apps](https://github.com/Clivern/Kevin-Cookbook/): Install and Configure Django/Python Apps.
+- [Django Apps Cookbook](https://github.com/Clivern/Kevin-Cookbook/): Install and Configure Django/Python Apps.
+- [Consul Cookbook](https://github.com/Clivern/Consul-Cookbook/): Install and Configure [Consul](https://www.consul.io/).
+- [HAProxy Cookbook](https://github.com/Clivern/HAProxy-Cookbook/): Install and Configure [HAProxy](http://www.haproxy.org/).
 
 
 Acknowledgements
