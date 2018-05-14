@@ -159,12 +159,17 @@ In case we want to bootstrap a node with name `node-01` and username is `root` a
 knife bootstrap node_domain_or_IP -x root -A -N node-01
 ```
 
-Once your new node is bootstrapped, you should have a new client:
+Once your new node is bootstrapped, you should have a new client and a new node:
 ```bash
 $ knife client list
 
-  clivern-validator
-  node-01
+    clivern-validator
+    node-01
+
+
+$ knife node list
+
+    node-01
 ```
 
 
