@@ -182,6 +182,7 @@ Our Cookbooks
 - [Django Apps Cookbook](https://github.com/Clivern/Kevin-Cookbook/): Install and Configure Django/Python Apps.
 - [Consul Cookbook](https://github.com/Clivern/Consul-Cookbook/): Install and Configure [Consul](https://www.consul.io/).
 - [HAProxy Cookbook](https://github.com/Clivern/HAProxy-Cookbook/): Install and Configure [HAProxy](http://www.haproxy.org/).
+- [MySQL Replication Cookbook](https://github.com/Clivern/MySQL-Replication-Cookbook/): Replicate MySQL With Chef.
 
 
 Acknowledgements
