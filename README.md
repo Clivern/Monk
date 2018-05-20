@@ -183,7 +183,7 @@ Our Cookbooks
 - [Consul Cookbook](https://github.com/Clivern/Consul-Cookbook/): Install and Configure [Consul](https://www.consul.io/).
 - [HAProxy Cookbook](https://github.com/Clivern/HAProxy-Cookbook/): Install and Configure [HAProxy](http://www.haproxy.org/).
 - [MySQL Replication Cookbook](https://github.com/Clivern/MySQL-Replication-Cookbook/): Replicate MySQL With Chef.
-
+- [Prometheus](https://github.com/Clivern/Prometheus-Cookbook): Install and Configure [Prometheus](https://www.prometheus.io/).
 
 Acknowledgements
 ----------------
