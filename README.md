@@ -185,6 +185,13 @@ Our Cookbooks
 - [MySQL Replication Cookbook](https://github.com/Clivern/MySQL-Replication-Cookbook/): Replicate MySQL With Chef.
 - [Prometheus Cookbook](https://github.com/Clivern/Prometheus-Cookbook): Install and Configure [Prometheus](https://www.prometheus.io/).
 
+
+Community Cookbooks
+-------------------
+
+- [Users](https://github.com/chef-cookbooks/users): Manages OS users from databags.
+
+
 Acknowledgements
 ----------------
 
